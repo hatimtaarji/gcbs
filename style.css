@@ -1,0 +1,118 @@
+/* Réinitialisation des styles de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form input[type="text"], form button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="text"] {
+    flex: 1 1 calc(70% - 20px);
+    max-width: calc(70% - 20px);
+}
+
+form button {
+    flex: 1 1 30%;
+    max-width: 30%;
+    background-color: #dc3545; /* Couleur rouge */
+    color: #fff; /* Texte blanc */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #c82333; /* Couleur rouge plus foncé au survol */
+}
+
+#searchBar {
+    width: 100%;
+    max-width: 300px; /* Ajuster la largeur du champ de recherche */
+    float: right; /* Aligner à droite */
+}
+
+#searchResults {
+    margin-top: 20px;
+    float: right; /* Aligner à droite */
+    max-width: 300px; /* Ajuster la largeur des résultats de recherche */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#searchResults div {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+#searchResults p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    form input[type="text"] {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    form button {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    #searchBar, #searchResults {
+        width: 100%;
+        max-width: 100%;
+        float: none; /* Annuler l'alignement à droite sur les petits écrans */
+    }
+}
